@@ -1,1 +1,1 @@
-# core-api
+# core 모듈
