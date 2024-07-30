@@ -1,0 +1,9 @@
+
+apply plugin: 'java-library'
+
+dependencies {
+}
+
+tasks.named('jar') {
+    enabled = true
+}
