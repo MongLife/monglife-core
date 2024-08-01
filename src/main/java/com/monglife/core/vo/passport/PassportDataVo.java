@@ -1,10 +1,14 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataVo {
-    private PassportDataVo account;
+    private final PassportDataVo account;
 
     private PassportDataVo(PassportDataVo account) {
         this.account = account;
+    }
+
+    public PassportDataVo account() {
+        return account;
     }
 
     public static PassportDataVoBuilder builder() {

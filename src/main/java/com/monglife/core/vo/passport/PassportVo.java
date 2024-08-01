@@ -3,14 +3,26 @@ package com.monglife.core.vo.passport;
 import java.time.LocalDateTime;
 
 public class PassportVo {
-    private PassportDataAccountVo data;
-    private String integrity;
-    private LocalDateTime createdAt;
+    private final PassportDataAccountVo data;
+    private final String integrity;
+    private final LocalDateTime createdAt;
 
     public PassportVo(PassportDataAccountVo data, String integrity, LocalDateTime createdAt) {
         this.data = data;
         this.integrity = integrity;
         this.createdAt = createdAt;
+    }
+
+    public PassportDataAccountVo data() {
+        return data;
+    }
+
+    public String integrity() {
+        return integrity;
+    }
+
+    public LocalDateTime createdAt() {
+        return createdAt;
     }
 
     public static PassportVoBuilder builder() {

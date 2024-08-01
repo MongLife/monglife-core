@@ -1,11 +1,11 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataAccountVo {
-    private Long id;
-    private String deviceId;
-    private String email;
-    private String name;
-    private String role;
+    private final Long id;
+    private final String deviceId;
+    private final String email;
+    private final String name;
+    private final String role;
 
     private PassportDataAccountVo(Long id, String deviceId, String email, String name, String role) {
         this.id = id;
@@ -13,6 +13,26 @@ public class PassportDataAccountVo {
         this.email = email;
         this.name = name;
         this.role = role;
+    }
+
+    public Long id() {
+        return id;
+    }
+
+    public String deviceId() {
+        return deviceId;
+    }
+
+    public String email() {
+        return email;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public String role() {
+        return role;
     }
 
     public static PassportDataAccountVoBuilder builder() {
