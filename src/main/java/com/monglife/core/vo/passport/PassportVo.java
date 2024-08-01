@@ -14,16 +14,29 @@ public class PassportVo {
     }
 
     public PassportDataAccountVo data() {
-        return data;
+        return this.getData();
     }
 
     public String integrity() {
-        return integrity;
+        return this.getIntegrity();
     }
 
     public LocalDateTime createdAt() {
+        return this.getCreatedAt();
+    }
+
+    public PassportDataAccountVo getData() {
+        return this.data;
+    }
+
+    public String getIntegrity() {
+        return integrity;
+    }
+
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
 
     public static PassportVoBuilder builder() {
         return new PassportVoBuilder();

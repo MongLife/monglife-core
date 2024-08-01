@@ -16,22 +16,42 @@ public class PassportDataAccountVo {
     }
 
     public Long id() {
-        return id;
+        return this.getId();
     }
 
     public String deviceId() {
-        return deviceId;
+        return this.getDeviceId();
     }
 
     public String email() {
-        return email;
+        return this.getEmail();
     }
 
     public String name() {
-        return name;
+        return this.getName();
     }
 
     public String role() {
+        return this.getRole();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRole() {
         return role;
     }
 

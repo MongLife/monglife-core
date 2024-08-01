@@ -8,6 +8,10 @@ public class PassportDataVo {
     }
 
     public PassportDataVo account() {
+        return this.getAccount();
+    }
+
+    public PassportDataVo getAccount() {
         return account;
     }
 

@@ -3,8 +3,8 @@ package com.monglife.core.dto.res;
 import com.monglife.core.code.ErrorCode;
 
 public class ErrorResDto {
-    private String code;
-    private String message;
+    private final String code;
+    private final String message;
 
     public static ErrorResDto of(ErrorCode errorCode) {
         return ErrorResDto.builder()
@@ -16,6 +16,14 @@ public class ErrorResDto {
     private ErrorResDto(String code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+    public String code() {
+        return code;
+    }
+
+    public String message() {
+        return message;
     }
 
     public static ErrorResDtoBuilder builder() {
