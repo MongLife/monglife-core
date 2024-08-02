@@ -19,10 +19,18 @@ public class ErrorResDto {
     }
 
     public String code() {
-        return code;
+        return this.getCode();
     }
 
     public String message() {
+        return this.getMessage();
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
         return message;
     }
 
