@@ -1,22 +1,22 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataAccountVo {
-    private final Long id;
+    private final Long accountId;
     private final String deviceId;
     private final String email;
     private final String name;
     private final String role;
 
-    private PassportDataAccountVo(Long id, String deviceId, String email, String name, String role) {
-        this.id = id;
+    private PassportDataAccountVo(Long accountId, String deviceId, String email, String name, String role) {
+        this.accountId = accountId;
         this.deviceId = deviceId;
         this.email = email;
         this.name = name;
         this.role = role;
     }
 
-    public Long id() {
-        return this.getId();
+    public Long accountId() {
+        return this.getAccountId();
     }
 
     public String deviceId() {
@@ -35,8 +35,8 @@ public class PassportDataAccountVo {
         return this.getRole();
     }
 
-    public Long getId() {
-        return id;
+    public Long getAccountId() {
+        return accountId;
     }
 
     public String getDeviceId() {
@@ -60,14 +60,14 @@ public class PassportDataAccountVo {
     }
 
     public static class PassportDataAccountVoBuilder {
-        private Long id;
+        private Long accountId;
         private String deviceId;
         private String email;
         private String name;
         private String role;
 
-        public PassportDataAccountVoBuilder id(Long id) {
-            this.id = id;
+        public PassportDataAccountVoBuilder accountId(Long id) {
+            this.accountId = id;
             return this;
         }
 
@@ -92,7 +92,7 @@ public class PassportDataAccountVo {
         }
 
         public PassportDataAccountVo build() {
-            return new PassportDataAccountVo(this.id, this.deviceId, this.email, this.name, this.role);
+            return new PassportDataAccountVo(this.accountId, this.deviceId, this.email, this.name, this.role);
         }
     }
 }
