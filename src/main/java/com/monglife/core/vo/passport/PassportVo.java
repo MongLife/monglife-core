@@ -3,15 +3,17 @@ package com.monglife.core.vo.passport;
 import java.time.LocalDateTime;
 
 public class PassportVo {
-    private final PassportDataAccountVo data;
-    private final LocalDateTime createdAt;
+    private PassportDataVo data;
+    private LocalDateTime createdAt;
 
-    public PassportVo(PassportDataAccountVo data, LocalDateTime createdAt) {
+    public PassportVo() {}
+
+    public PassportVo(PassportDataVo data, LocalDateTime createdAt) {
         this.data = data;
         this.createdAt = createdAt;
     }
 
-    public PassportDataAccountVo data() {
+    public PassportDataVo data() {
         return this.getData();
     }
 
@@ -19,7 +21,7 @@ public class PassportVo {
         return this.getCreatedAt();
     }
 
-    public PassportDataAccountVo getData() {
+    public PassportDataVo getData() {
         return this.data;
     }
 
@@ -33,10 +35,10 @@ public class PassportVo {
     }
 
     public static class PassportVoBuilder {
-        private PassportDataAccountVo data;
+        private PassportDataVo data;
         private LocalDateTime createdAt;
 
-        public PassportVoBuilder data(PassportDataAccountVo data) {
+        public PassportVoBuilder data(PassportDataVo data) {
             this.data = data;
             return this;
         }

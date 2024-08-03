@@ -1,11 +1,13 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataAccountVo {
-    private final Long accountId;
-    private final String deviceId;
-    private final String email;
-    private final String name;
-    private final String role;
+    private Long accountId;
+    private String deviceId;
+    private String email;
+    private String name;
+    private String role;
+
+    public PassportDataAccountVo() {}
 
     private PassportDataAccountVo(Long accountId, String deviceId, String email, String name, String role) {
         this.accountId = accountId;

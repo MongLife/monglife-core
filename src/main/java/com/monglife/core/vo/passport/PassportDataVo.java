@@ -1,17 +1,19 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataVo {
-    private final PassportDataVo account;
+    private PassportDataAccountVo account;
 
-    private PassportDataVo(PassportDataVo account) {
+    public PassportDataVo() {}
+
+    private PassportDataVo(PassportDataAccountVo account) {
         this.account = account;
     }
 
-    public PassportDataVo account() {
+    public PassportDataAccountVo account() {
         return this.getAccount();
     }
 
-    public PassportDataVo getAccount() {
+    public PassportDataAccountVo getAccount() {
         return account;
     }
 
@@ -20,9 +22,9 @@ public class PassportDataVo {
     }
 
     public static class PassportDataVoBuilder {
-        private PassportDataVo account;
+        private PassportDataAccountVo account;
 
-        public PassportDataVoBuilder account(PassportDataVo account) {
+        public PassportDataVoBuilder account(PassportDataAccountVo account) {
             this.account = account;
             return this;
         }
