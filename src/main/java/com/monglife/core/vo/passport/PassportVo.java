@@ -3,8 +3,10 @@ package com.monglife.core.vo.passport;
 import java.time.LocalDateTime;
 
 public class PassportVo {
-    private final PassportDataAccountVo data;
-    private final LocalDateTime createdAt;
+    private PassportDataAccountVo data;
+    private LocalDateTime createdAt;
+
+    public PassportVo() {}
 
     public PassportVo(PassportDataAccountVo data, LocalDateTime createdAt) {
         this.data = data;

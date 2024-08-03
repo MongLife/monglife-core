@@ -1,7 +1,9 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataVo {
-    private final PassportDataVo account;
+    private PassportDataVo account;
+
+    public PassportDataVo() {}
 
     private PassportDataVo(PassportDataVo account) {
         this.account = account;
