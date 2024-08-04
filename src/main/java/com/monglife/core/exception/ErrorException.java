@@ -1,6 +1,6 @@
 package com.monglife.core.exception;
 
-import com.monglife.core.code.ErrorCode;
+import com.monglife.core.code.error.ErrorCode;
 
 public class ErrorException extends RuntimeException {
 
