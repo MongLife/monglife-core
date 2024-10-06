@@ -1,6 +1,6 @@
 package com.monglife.core.dto.res;
 
-import com.monglife.core.code.error.ErrorCode;
+import com.monglife.core.enums.error.ErrorCode;
 
 public class ErrorResDto {
     private String code;
