@@ -1,4 +1,4 @@
-package com.monglife.core.code.role;
+package com.monglife.core.enums.role;
 
 public enum RoleCode {
     NORMAL("NORMAL", "일반회원"),

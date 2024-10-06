@@ -1,4 +1,4 @@
-package com.monglife.core.code.common;
+package com.monglife.core.enums.common;
 
 public enum MapCode {
 
