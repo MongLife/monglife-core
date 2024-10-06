@@ -1,4 +1,4 @@
-package com.monglife.core.code;
+package com.monglife.core.enums.error;
 
 public interface ErrorCode {
     Integer getHttpStatus();

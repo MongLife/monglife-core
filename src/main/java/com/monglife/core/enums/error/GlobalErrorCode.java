@@ -1,4 +1,4 @@
-package com.monglife.core.code;
+package com.monglife.core.enums.error;
 
 public enum GlobalErrorCode implements ErrorCode {
     INTERNAL_SERVER_ERROR(500, "ERROR-000", "internal server error"),
