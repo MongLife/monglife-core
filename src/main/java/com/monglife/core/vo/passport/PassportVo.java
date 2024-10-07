@@ -3,6 +3,7 @@ package com.monglife.core.vo.passport;
 import java.time.LocalDateTime;
 
 public class PassportVo {
+
     private PassportDataVo data;
     private LocalDateTime createdAt;
 

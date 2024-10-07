@@ -1,6 +1,7 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataVo {
+
     private PassportDataAccountVo account;
 
     public PassportDataVo() {}

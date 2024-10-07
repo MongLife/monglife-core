@@ -28,4 +28,16 @@ public enum FoodCode {
         this.groupCode = groupCode;
         this.name = name;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getGroupCode() {
+        return groupCode;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

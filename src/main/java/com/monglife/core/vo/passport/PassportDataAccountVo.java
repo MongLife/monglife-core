@@ -1,6 +1,7 @@
 package com.monglife.core.vo.passport;
 
 public class PassportDataAccountVo {
+
     private Long accountId;
     private String deviceId;
     private String email;
