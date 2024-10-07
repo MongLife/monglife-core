@@ -1,17 +1,37 @@
 package com.monglife.core.vo.passport;
 
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
 public class PassportDataVo {
 
-    private final PassportDataAccountVo account;
-    private final  PassportDataAppVersionVo appVersion;
+    private PassportDataAccountVo account;
 
-    @Builder
-    private PassportDataVo(PassportDataAccountVo account, PassportDataAppVersionVo appVersion) {
+    public PassportDataVo() {}
+
+    private PassportDataVo(PassportDataAccountVo account) {
         this.account = account;
-        this.appVersion = appVersion;
+    }
+
+    public PassportDataAccountVo account() {
+        return this.getAccount();
+    }
+
+    public PassportDataAccountVo getAccount() {
+        return account;
+    }
+
+    public static PassportDataVoBuilder builder() {
+        return new PassportDataVoBuilder();
+    }
+
+    public static class PassportDataVoBuilder {
+        private PassportDataAccountVo account;
+
+        public PassportDataVoBuilder account(PassportDataAccountVo account) {
+            this.account = account;
+            return this;
+        }
+
+        public PassportDataVo build() {
+            return new PassportDataVo(this.account);
+        }
     }
 }

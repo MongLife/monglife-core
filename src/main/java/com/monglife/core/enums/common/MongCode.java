@@ -48,4 +48,16 @@ public enum MongCode {
         this.level = level;
         this.name = name;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
