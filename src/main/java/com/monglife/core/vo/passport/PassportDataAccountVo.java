@@ -39,23 +39,23 @@ public class PassportDataAccountVo {
     }
 
     public Long getAccountId() {
-        return accountId;
+        return this.accountId;
     }
 
     public String getDeviceId() {
-        return deviceId;
+        return this.deviceId;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     public static PassportDataAccountVoBuilder builder() {

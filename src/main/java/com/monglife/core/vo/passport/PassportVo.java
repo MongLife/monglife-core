@@ -27,7 +27,7 @@ public class PassportVo {
     }
 
     public LocalDateTime getCreatedAt() {
-        return createdAt;
+        return this.createdAt;
     }
 
 
