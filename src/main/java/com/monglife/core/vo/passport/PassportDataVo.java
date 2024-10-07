@@ -3,19 +3,29 @@ package com.monglife.core.vo.passport;
 public class PassportDataVo {
 
     private PassportDataAccountVo account;
+    private PassportDataAppVersionVo appVersion;
 
     public PassportDataVo() {}
 
-    private PassportDataVo(PassportDataAccountVo account) {
+    private PassportDataVo(PassportDataAccountVo account, PassportDataAppVersionVo appVersion) {
         this.account = account;
+        this.appVersion = appVersion;
     }
 
     public PassportDataAccountVo account() {
         return this.getAccount();
     }
 
+    public PassportDataAppVersionVo appVersion() {
+        return this.getAppVersion();
+    }
+
     public PassportDataAccountVo getAccount() {
-        return account;
+        return this.account;
+    }
+
+    public PassportDataAppVersionVo getAppVersion() {
+        return this.appVersion;
     }
 
     public static PassportDataVoBuilder builder() {
@@ -24,14 +34,16 @@ public class PassportDataVo {
 
     public static class PassportDataVoBuilder {
         private PassportDataAccountVo account;
+        private PassportDataAppVersionVo appVersion;
 
-        public PassportDataVoBuilder account(PassportDataAccountVo account) {
+        public PassportDataVoBuilder account(PassportDataAccountVo account, PassportDataAppVersionVo appVersion) {
             this.account = account;
+            this.appVersion = appVersion;
             return this;
         }
 
         public PassportDataVo build() {
-            return new PassportDataVo(this.account);
+            return new PassportDataVo(this.account, this.appVersion);
         }
     }
 }
