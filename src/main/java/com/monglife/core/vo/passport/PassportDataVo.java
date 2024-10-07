@@ -36,8 +36,12 @@ public class PassportDataVo {
         private PassportDataAccountVo account;
         private PassportDataAppVersionVo appVersion;
 
-        public PassportDataVoBuilder account(PassportDataAccountVo account, PassportDataAppVersionVo appVersion) {
+        public PassportDataVoBuilder account(PassportDataAccountVo account) {
             this.account = account;
+            return this;
+        }
+
+        public PassportDataVoBuilder appVersion(PassportDataAppVersionVo appVersion) {
             this.appVersion = appVersion;
             return this;
         }
