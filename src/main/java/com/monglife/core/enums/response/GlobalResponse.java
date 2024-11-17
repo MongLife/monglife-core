@@ -29,6 +29,16 @@ public enum GlobalResponse implements Response {
     }
 
     @Override
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
     public ResponseDto<Map<String, Object>> toResponseDto() {
         return new ResponseDto<>(code, message, httpStatus, Collections.emptyMap());
     }
