@@ -6,13 +6,7 @@ import java.util.Map;
 
 public interface Response {
 
-    Integer getHttpStatus();
-
-    String getCode();
-
-    String getMessage();
-
-    ResponseDto<Map<String, Object>> toResponseDto();
+    ResponseDto<Map<String, Object>> toResponse();
 
     <T> ResponseDto<T> toResponseDto(T result);
 }

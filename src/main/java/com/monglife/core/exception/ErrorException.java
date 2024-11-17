@@ -1,22 +1,10 @@
 package com.monglife.core.exception;
 
-import com.monglife.core.enums.error.ErrorCode;
+import com.monglife.core.enums.response.Response;
 
-public class ErrorException extends RuntimeException {
+public interface ErrorException {
 
-    public ErrorCode errorCode;
+    Response getResponse();
 
-    public ErrorException(ErrorCode errorCode) {
-        super(errorCode.getMessage());
-        this.errorCode = errorCode;
-    }
-
-    public ErrorException(Throwable e) {
-        super(e);
-    }
-
-    public ErrorException(ErrorCode errorCode, Throwable e) {
-        super(errorCode.getMessage(), e);
-        this.errorCode = errorCode;
-    }
+    <T> T getResult();
 }

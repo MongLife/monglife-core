@@ -49,6 +49,7 @@ public enum MapCode {
     ;
 
     public final String code;
+
     public final String name;
 
     MapCode(String code, String name) {

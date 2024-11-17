@@ -40,7 +40,9 @@ public enum MongCode {
     ;
 
     public final String code;
+
     public final Integer level;
+
     public final String name;
 
     MongCode(String code, Integer level, String name) {
