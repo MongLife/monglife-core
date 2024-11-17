@@ -20,7 +20,9 @@ public enum FoodCode {
     ;
 
     public final String code;
+
     public final String groupCode;
+
     public final String name;
 
     FoodCode(String code, String groupCode, String name) {
