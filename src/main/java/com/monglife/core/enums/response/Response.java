@@ -6,7 +6,7 @@ import java.util.Map;
 
 public interface Response {
 
-    ResponseDto<Map<String, Object>> toResponse();
+    ResponseDto<Map<String, Object>> toResponseDto();
 
     <T> ResponseDto<T> toResponseDto(T result);
 }
