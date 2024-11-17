@@ -8,6 +8,10 @@ public interface Response {
 
     Integer getHttpStatus();
 
+    String getCode();
+
+    String getMessage();
+
     ResponseDto<Map<String, Object>> toResponseDto();
 
     <T> ResponseDto<T> toResponseDto(T result);
