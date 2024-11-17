@@ -2,13 +2,15 @@ package com.monglife.core.dto.response;
 
 public class ResponseDto<T> {
 
-    private final String code;
+    private String code;
 
-    private final String message;
+    private String message;
 
-    private final Integer httpStatus;
+    private Integer httpStatus;
 
-    private final T result;
+    private T result;
+
+    public ResponseDto() {}
 
     public ResponseDto(String code, String message, Integer httpStatus ,T result) {
         this.code = code;
@@ -31,5 +33,21 @@ public class ResponseDto<T> {
 
     public T getResult() {
         return result;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setHttpStatus(Integer httpStatus) {
+        this.httpStatus = httpStatus;
+    }
+
+    public void setResult(T result) {
+        this.result = result;
     }
 }
