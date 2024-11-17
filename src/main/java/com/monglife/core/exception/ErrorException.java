@@ -8,5 +8,5 @@ public interface ErrorException {
 
     Response getResponse();
 
-    Map<String, Object> getResult();
+    Map<String, ?> getResult();
 }
