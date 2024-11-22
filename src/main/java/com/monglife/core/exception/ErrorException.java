@@ -6,14 +6,9 @@ import java.util.Map;
 
 public class ErrorException extends RuntimeException {
 
-    private final Response response;
+    protected Response response;
 
-    private final Map<String, Object> result;
-
-    public ErrorException(Response response, Map<String, Object> result) {
-        this.response = response;
-        this.result = result;
-    }
+    protected Map<String, Object> result;
 
     public Response getResponse() {
         return this.response;
