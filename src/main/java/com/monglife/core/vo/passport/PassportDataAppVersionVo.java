@@ -2,26 +2,26 @@ package com.monglife.core.vo.passport;
 
 public class PassportDataAppVersionVo {
 
-    private String appCode;
+    private String appPackageName;
     private String buildVersion;
 
     public PassportDataAppVersionVo() {}
 
-    private PassportDataAppVersionVo(String appCode, String buildVersion) {
-        this.appCode = appCode;
+    private PassportDataAppVersionVo(String appPackageName, String buildVersion) {
+        this.appPackageName = appPackageName;
         this.buildVersion = buildVersion;
     }
 
-    public String appCode() {
-        return this.getAppCode();
+    public String appPackageName() {
+        return this.getAppPackageName();
     }
 
     public String buildVersion() {
         return this.getBuildVersion();
     }
 
-    public String getAppCode() {
-        return this.appCode;
+    public String getAppPackageName() {
+        return this.appPackageName;
     }
 
     public String getBuildVersion() {
@@ -33,11 +33,11 @@ public class PassportDataAppVersionVo {
     }
 
     public static class PassportDataAppVersionVoBuilder {
-        private String appCode;
+        private String appPackageName;
         private String buildVersion;
 
-        public PassportDataAppVersionVoBuilder appCode(String appCode) {
-            this.appCode = appCode;
+        public PassportDataAppVersionVoBuilder appPackageName(String appPackageName) {
+            this.appPackageName = appPackageName;
             return this;
         }
 
@@ -47,7 +47,7 @@ public class PassportDataAppVersionVo {
         }
 
         public PassportDataAppVersionVo build() {
-            return new PassportDataAppVersionVo(this.appCode, this.buildVersion);
+            return new PassportDataAppVersionVo(this.appPackageName, this.buildVersion);
         }
     }
 }
