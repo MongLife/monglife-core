@@ -3,6 +3,13 @@ package com.monglife.core.utils;
 import java.lang.reflect.Field;
 
 public class ReflectionUtil {
+
+    /**
+     * 필드 값 조회
+     * @param obj 객체
+     * @param fieldName 필드명
+     * @return 필드 값
+     */
     public static Object getField(Object obj, String fieldName) {
         Field[] fields = obj.getClass().getDeclaredFields();
 
@@ -23,6 +30,13 @@ public class ReflectionUtil {
         return null;
     }
 
+    /**
+     * 필드 값 변경
+     * @param obj 객체
+     * @param fieldName 필드명
+     * @param value 필드 값
+     * @return 변경된 객체
+     */
     public static Object setField(Object obj, String fieldName, Object value) {
         Field[] fields = obj.getClass().getDeclaredFields();
 
@@ -43,6 +57,12 @@ public class ReflectionUtil {
         return obj;
     }
 
+    /**
+     * 필드 값 복사
+     * @param obj 원본 객체
+     * @param targetObj 타겟 객체
+     * @return 타겟 객체
+     */
     public static Object setFields(Object obj, Object targetObj) {
         Field[] targetFields = targetObj.getClass().getDeclaredFields();
         Field[] fields = obj.getClass().getDeclaredFields();

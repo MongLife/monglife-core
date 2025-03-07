@@ -1,53 +1,18 @@
 package com.monglife.core.vo.passport;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
 public class PassportDataAppVersionVo {
 
-    private String appPackageName;
-    private String buildVersion;
+    private final String appPackageName;
 
-    public PassportDataAppVersionVo() {}
+    private final String buildVersion;
 
+    @Builder
     private PassportDataAppVersionVo(String appPackageName, String buildVersion) {
         this.appPackageName = appPackageName;
         this.buildVersion = buildVersion;
-    }
-
-    public String appPackageName() {
-        return this.getAppPackageName();
-    }
-
-    public String buildVersion() {
-        return this.getBuildVersion();
-    }
-
-    public String getAppPackageName() {
-        return this.appPackageName;
-    }
-
-    public String getBuildVersion() {
-        return this.buildVersion;
-    }
-
-    public static PassportDataAppVersionVoBuilder builder() {
-        return new PassportDataAppVersionVoBuilder();
-    }
-
-    public static class PassportDataAppVersionVoBuilder {
-        private String appPackageName;
-        private String buildVersion;
-
-        public PassportDataAppVersionVoBuilder appPackageName(String appPackageName) {
-            this.appPackageName = appPackageName;
-            return this;
-        }
-
-        public PassportDataAppVersionVoBuilder buildVersion(String buildVersion) {
-            this.buildVersion = buildVersion;
-            return this;
-        }
-
-        public PassportDataAppVersionVo build() {
-            return new PassportDataAppVersionVo(this.appPackageName, this.buildVersion);
-        }
     }
 }
