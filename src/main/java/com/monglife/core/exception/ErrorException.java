@@ -1,20 +1,14 @@
 package com.monglife.core.exception;
 
-import com.monglife.core.enums.error.ErrorCode;
+import com.monglife.core.enums.response.Response;
+import lombok.Getter;
 
+import java.util.Map;
+
+@Getter
 public class ErrorException extends RuntimeException {
 
-    public ErrorCode errorCode;
+    protected Response response;
 
-    public ErrorException(ErrorCode errorCode) {
-        super(errorCode.getMessage());
-        this.errorCode = errorCode;
-    }
-    public ErrorException(Throwable e) {
-        super(e);
-    }
-    public ErrorException(ErrorCode errorCode, Throwable e) {
-        super(errorCode.getMessage(), e);
-        this.errorCode = errorCode;
-    }
+    protected Map<String, Object> result;
 }
