@@ -15,7 +15,7 @@ repositories {
 }
 
 ext {
-    coreVersion ='1.0.0'
+    coreVersion ='2.0.3'
 
 }
 
