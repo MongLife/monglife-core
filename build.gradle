@@ -24,7 +24,6 @@ dependencies {
 }
 
 jar {
-    archiveVersion = version
     destinationDirectory.set(file("./release"))
     enabled(true)
 }
@@ -32,7 +31,9 @@ jar {
 publishing {
     publications {
         maven(MavenPublication) {
-
+            groupId = group
+            artifactId = 'monglife-core'
+            version = version
             from components.java
         }
     }
