@@ -2,15 +2,17 @@ package com.monglife.core.vo.passport;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Getter
+@NoArgsConstructor
 public class PassportVo {
 
-    private final PassportDataVo data;
+    private PassportDataVo data;
 
-    private final LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @Builder
     public PassportVo(PassportDataVo data, LocalDateTime createdAt) {
