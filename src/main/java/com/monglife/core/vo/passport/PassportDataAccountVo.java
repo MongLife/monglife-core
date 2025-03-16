@@ -2,22 +2,24 @@ package com.monglife.core.vo.passport;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 public class PassportDataAccountVo {
 
-    private final Long accountId;
+    private Long accountId;
 
-    private final String deviceId;
+    private String deviceId;
 
-    private final String email;
+    private String email;
 
-    private final String name;
+    private String name;
 
-    private final String role;
+    private String role;
 
     @Builder
-    private PassportDataAccountVo(Long accountId, String deviceId, String email, String name, String role) {
+    public PassportDataAccountVo(Long accountId, String deviceId, String email, String name, String role) {
         this.accountId = accountId;
         this.deviceId = deviceId;
         this.email = email;
