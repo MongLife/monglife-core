@@ -1,6 +1,9 @@
 package com.monglife.core.dto.event;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -13,13 +16,10 @@ public class SendNotificationDto {
 
     private String body;
 
-    private Boolean isAppForegroundMessage;
-
     @Builder
-    public SendNotificationDto(Long accountId, String title, String body, Boolean isAppForegroundMessage) {
+    public SendNotificationDto(Long accountId, String title, String body) {
         this.accountId = accountId;
         this.title = title;
         this.body = body;
-        this.isAppForegroundMessage = isAppForegroundMessage;
     }
 }

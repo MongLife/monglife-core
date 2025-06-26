@@ -2,6 +2,7 @@ package com.monglife.core.enums.error;
 
 import com.monglife.core.dto.response.ResponseDto;
 
+import java.util.Collections;
 import java.util.Map;
 
 public interface ErrorCode {
@@ -10,7 +11,11 @@ public interface ErrorCode {
 
     String getMessage();
 
-    ResponseDto<Map<String, Object>> toResponseDto(Integer httpStatus);
+    default ResponseDto<Map<String, Object>> toResponseDto(Integer httpStatus) {
+        return new ResponseDto<>(getCode(), getMessage(), httpStatus, Collections.emptyMap());
+    }
 
-    <T> ResponseDto<T> toResponseDto(Integer httpStatus, T result);
+    default <T> ResponseDto<T> toResponseDto(Integer httpStatus, T result) {
+        return new ResponseDto<>(getCode(), getMessage(), httpStatus, result);
+    }
 }

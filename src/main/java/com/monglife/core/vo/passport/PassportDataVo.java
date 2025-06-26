@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 public class PassportDataVo {
 
     private PassportDataAccountVo account;
+
     private  PassportDataAppVersionVo appVersion;
 
     @Builder
